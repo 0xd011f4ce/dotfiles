@@ -84,6 +84,9 @@
 						(variable-pitch-mode 1)
 						(visual-fill-column-mode 1)))
 
+;; yasnippet
+(global-set-key (kbd "C-c C-y") 'yas-expand)
+
 ;;; ==== Languages ====
 ;; LSP
 (add-hook 'js-mode-hook 'lsp)
@@ -107,7 +110,8 @@
 ;;; ==== Emacs behaviour/appeareance ====
 (setq auto-save-default nil
 			create-lockfiles nil
-			inhibit-startup-screen t)
+			inhibit-startup-screen t
+			make-backup-files nil)
 
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
