@@ -25,6 +25,7 @@
 				all-the-icons-dired
 				treemacs-all-the-icons
 				gruvbox-theme
+				rainbow-delimiters
 				mood-line))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
@@ -125,7 +126,9 @@
 						(setq indent-tabs-mode t
 									tab-width 2
 									c-basic-offset 2
-									python-indent-offset 2)))
+									python-indent-offset 2)
+						(electric-pair-mode)
+						(rainbow-delimiters-mode)))
 
 (add-hook 'before-save-hook
 					(lambda ()
