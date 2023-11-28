@@ -1,5 +1,4 @@
 (package-initialize)
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 												 ("org" . "https://orgmode.org/elpa/")
 												 ("elpa" . "https://elpa.gnu.org/packages/")))
@@ -22,6 +21,9 @@
 				org-bullets
 				visual-fill-column
 
+				all-the-icons
+				all-the-icons-dired
+				treemacs-all-the-icons
 				gruvbox-theme))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
@@ -132,8 +134,13 @@
 ;; 80 cols delimiter
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
+;; all the icons
+(when (display-graphic-p)
+	(require 'all-the-icons)
+	(require 'all-the-icons-dired)
+	(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+	(require 'treemacs-all-the-icons)
+	(treemacs-load-theme "all-the-icons"))
+
 ;; gruvbox theme
 (load-theme 'gruvbox-dark-soft t)
-
-;; font
-(set-frame-font "Terminus-regular 12" nil t)
