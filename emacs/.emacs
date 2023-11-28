@@ -88,6 +88,8 @@
 (add-hook 'js-mode-hook 'lsp)
 (add-hook 'c-mode-hook 'lsp)
 (add-hook 'python-mode-hook 'lsp)
+(add-hook 'sgml-mode-hook 'lsp)
+(add-hook 'css-mode-hook 'lsp)
 (setq gc-cons-threshold (* 100 1024 1024)
 			read-process-output-max (* 1024 1024)
 			company-idle-delay 0.0
