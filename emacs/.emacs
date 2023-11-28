@@ -87,6 +87,7 @@
 ;; LSP
 (add-hook 'js-mode-hook 'lsp)
 (add-hook 'c-mode-hook 'lsp)
+(add-hook 'python-mode-hook 'lsp)
 (setq gc-cons-threshold (* 100 1024 1024)
 			read-process-output-max (* 1024 1024)
 			company-idle-delay 0.0
@@ -112,9 +113,12 @@
 (set-fringe-mode 10)
 
 ;; use only tabs and convert spaces to tabs
-(setq indent-tabs-mode t)
-(setq-default tab-width 2
-							c-basic-offset 2)
+(add-hook 'prog-mode-hook
+					(lambda ()
+						(setq indent-tabs-mode t
+									tab-width 2
+									c-basic-offset 2
+									python-indent-offset 2)))
 
 (add-hook 'before-save-hook
 					(lambda ()
