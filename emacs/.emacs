@@ -28,7 +28,9 @@
 				treemacs-all-the-icons
 				gruvbox-theme
 				rainbow-delimiters
-				mood-line))
+				mood-line
+				dimmer
+				highlight-indent-guides))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
 	(package-refresh-contents)
@@ -183,6 +185,17 @@
 
 ;; modeline
 (mood-line-mode)
+
+;; dimmer
+(require 'dimmer)
+(dimmer-configure-which-key)
+(dimmer-configure-helm)
+(setq dimmer-adjustment-mode :foreground
+			dimmer-fraction 0.5)
+(dimmer-mode t)
+
+;; highlight indent guides
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 ;; gruvbox theme
 (load-theme 'gruvbox-dark-soft t)
