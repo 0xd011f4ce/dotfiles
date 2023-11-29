@@ -17,6 +17,7 @@
 				dap-mode
 				json-mode
 				emmet-mode
+				prettier
 
 				org-bullets
 				visual-fill-column
@@ -87,6 +88,9 @@
 
 ;; yasnippet
 (global-set-key (kbd "C-c C-y") 'yas-expand)
+
+;; prettier
+(add-hook 'after-init-hook #'global-prettier-mode)
 
 ;;; ==== Languages ====
 ;; LSP
