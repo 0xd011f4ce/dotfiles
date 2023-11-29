@@ -146,6 +146,7 @@
 	(add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; 80 cols delimiter
+(setq-default fill-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
 ;; all the icons
