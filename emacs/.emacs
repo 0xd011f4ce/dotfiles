@@ -28,6 +28,7 @@
 				treemacs-all-the-icons
 				gruvbox-theme
 				rainbow-delimiters
+				rainbow-mode
 				mood-line
 				dimmer
 				highlight-indent-guides))
@@ -146,7 +147,7 @@
 (tooltip-mode -1)
 (set-fringe-mode 10)
 
-;; use only tabs and convert spaces to tabs
+;; use only tabs, enable electric pair, rainbow delimiters and rainbow mode
 (add-hook 'prog-mode-hook
 					(lambda ()
 						(setq indent-tabs-mode t
@@ -154,11 +155,17 @@
 									c-basic-offset 2
 									python-indent-offset 2)
 						(electric-pair-mode)
-						(rainbow-delimiters-mode)))
+						(rainbow-delimiters-mode)
+						(rainbow-mode)))
 
+;; convert spaces to tabs before saving
 (add-hook 'before-save-hook
 					(lambda ()
-						(tabify (point-min) (point-max))))
+						(when (not (eq major-mode 'org-mode))
+							(tabify (point-min) (point-max)))))
+
+;; show hex colours in text buffers as well
+(add-hook 'text-mode-hook #'rainbow-mode)
 
 ;; show lines and cols
 (global-display-line-numbers-mode 1)
