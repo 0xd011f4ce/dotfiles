@@ -2,6 +2,7 @@
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 												 ("org" . "https://orgmode.org/elpa/")
 												 ("elpa" . "https://elpa.gnu.org/packages/")))
+
 (setq package-selected-packages
 			'(lsp-mode
 				lsp-ui
@@ -129,7 +130,9 @@
 
 (with-eval-after-load 'lsp-mode
 	(require 'dap-chrome)
+	(require 'company)
 	(add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+	(add-to-list 'company-backends 'company-files)
 	(yas-global-mode))
 
 ;; HTML/CSS
@@ -181,6 +184,7 @@
 ;; 80 cols delimiter
 (setq-default fill-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(add-hook 'text-mode-hook #'display-fill-column-indicator-mode)
 
 ;; all the icons
 (when (display-graphic-p)
