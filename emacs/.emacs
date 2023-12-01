@@ -210,3 +210,7 @@
 
 ;; gruvbox theme
 (load-theme 'gruvbox-dark-soft t)
+
+;; ===== Custom ====
+;; the folder is called ".emacs.c" (the c stands for custom im so smort)
+(load "~/.emacs.c/better-defaults.el")
