@@ -20,6 +20,8 @@
 				json-mode
 				emmet-mode
 				prettier
+				magit
+				multiple-cursors
 
 				org-bullets
 				visual-fill-column
@@ -96,6 +98,11 @@
 
 ;; prettier
 (add-hook 'after-init-hook #'global-prettier-mode)
+
+;; multiple-cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C-c m") 'mc/mark-all-like-this)
+(define-key mc/keymap (kbd "<return>") nil) ;; this causes me issues with emmet
 
 ;;; ==== Languages ====
 ;; LSP
