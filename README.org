@@ -1,0 +1,69 @@
+* Dotfiles
+
+Here are the configurations for some programs that I use.
+
+* Emacs
+
+I have such a complete emacs config, it has a pretty gruvbox theme (my
+favourite), lsp, magit, org-mode looks amazing, it uses *tabs instead of*
+*spaces* and overwrites some default emacs commands so it works in a way that I
+like it more.
+
+** Installation
+
+To install it, all you have to do is just to clone the project and symlink both
+files in the /emacs/ folder to your home directory:
+
+#+begin_src bash
+  cd ~ && git clone https://github.com/0xd011f4ce/dotfiles
+  ln -s /home/<user>/dotfiles/emacs/.emacs ~
+
+  # this is not mandatory, overwrites some stuff so you might don't want to
+  # install it, if you don't symlink it, delete the lines in the .emacs file
+  # that point to files there.
+  ln -s /home/<user>/dotfiles/emacs/.emacs.c
+#+end_src
+
+An after that, just fire up emacs and it will automatically install all the
+required packages.
+
+** Keybinds
+
+*NOTICE*: This might won't be updated, I will be comparing this file with the
+actual emacs config so all the keybindings and changes are here 🤗
+
+I've modified some things and there are some keybinds unique to my config, here
+are some:
+
+| Keybind          | Command                            |
+|------------------+------------------------------------|
+| <f8>             | treemacs                           |
+| C-c C-y (or TAB) | yas-expand                         |
+| C-c m            | mc/mark-all-like-this              |
+| M-RET            | lsp-ui-sideline-apply-code-actions |
+| C-c s            | ispell-word                        |
+| C-c f            | ispell-buffer                      |
+
+And there are also the keybinds from normal packages like /C-x g/ for magit
+and well, you know all those, if not, check the packages in the /.emacs/ file
+and rtfm
+
+** Custom scripts
+
+The /.emacs.c/ folder contains custom scripts that override some default
+behaviours of emacs, here are some of them:
+
+*** better-defaults
+
+This file is called /better-defaults/ because I overwrite some default emacs
+configurations so they work *better* for me, hence the name.
+
+What it does for now is that it overrides the behaviour of /C-v/ and /M-v/ to
+insert a mark before scrolling so I can come back to that position nicely with
+/C-u C-SPC/. Here are all the new keybindings.
+
+| Keybind | Command                  | Description                          |
+|---------+--------------------------+--------------------------------------|
+| C-v     | my/scroll-up-with-mark   | Creates a mark before scrolling up   |
+| M-v     | my/scroll-down-with-mark | Creates a mark before scrolling down |
+| C-c RET | my/set-mark-here         | Creates a mark at the point position |

@@ -104,6 +104,10 @@
 (global-set-key (kbd "C-c m") 'mc/mark-all-like-this)
 (define-key mc/keymap (kbd "<return>") nil) ;; this causes me issues with emmet
 
+;; ispell
+(global-set-key (kbd "C-c s") 'ispell-word)
+(global-set-key (kbd "C-c f") 'ispell-buffer)
+
 ;;; ==== Languages ====
 ;; LSP
 (add-hook 'js-mode-hook 'lsp)
