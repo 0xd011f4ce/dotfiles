@@ -17,15 +17,16 @@ files in the /emacs/ folder to your home directory:
 #+begin_src bash
   cd ~ && git clone https://github.com/0xd011f4ce/dotfiles
   ln -s /home/<user>/dotfiles/emacs/.emacs ~
-
-  # this is not mandatory, overwrites some stuff so you might don't want to
-  # install it, if you don't symlink it, delete the lines in the .emacs file
-  # that point to files there.
   ln -s /home/<user>/dotfiles/emacs/.emacs.c
 #+end_src
 
 An after that, just fire up emacs and it will automatically install all the
 required packages.
+
+*NOTE*: In the /.emacs.c/ folder there are some files (like the /erc/ in the
+/packages/ folder) that is literally just to connect to irc servers when emacs
+is started in server mode, you can remove those files, and all the other things
+that you don't want (it won't crash if any file inside /.emacs.c/ is missing)
 
 ** Keybinds
 

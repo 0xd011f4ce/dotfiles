@@ -76,11 +76,18 @@
 (add-hook 'sgml-mode-hook 'emmet-mode)
 
 ;; ===== Custom ====
+(defun my/load-if-exists (file)
+		 (interactive)
+		 (if (file-exists-p file)
+				 (load file)
+			 (message "File does not exist: %s" file)))
+
 ;; load configuration for packages
-(load "~/.emacs.c/packages/org.el") ;; org-mode configurations
-(load "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
+(my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
+(my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
+(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc
 
 ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
-(load "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
-(load "~/.emacs.c/better-defaults.el") ;; better-defaults
-(load "~/.emacs.c/utils.el") ;; some useful things
+(my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
+(my/load-if-exists "~/.emacs.c/better-defaults.el") ;; better-defaults
+(my/load-if-exists "~/.emacs.c/utils.el") ;; some useful things

@@ -1,3 +1,4 @@
+;; org configurations are here
 (require 'org-bullets)
 (add-hook 'org-mode-hook
 					(lambda ()
