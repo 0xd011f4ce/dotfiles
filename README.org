@@ -64,6 +64,4 @@ insert a mark before scrolling so I can come back to that position nicely with
 
 | Keybind | Command                  | Description                          |
 |---------+--------------------------+--------------------------------------|
-| C-v     | my/scroll-up-with-mark   | Creates a mark before scrolling up   |
-| M-v     | my/scroll-down-with-mark | Creates a mark before scrolling down |
 | C-c RET | my/set-mark-here         | Creates a mark at the point position |
