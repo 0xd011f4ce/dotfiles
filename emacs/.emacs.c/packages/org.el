@@ -25,10 +25,10 @@
 																			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
 						(setq org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")
-									org-ellipsis " ▾")
-
-						(setq visual-fill-column-width 100
-									visual-fill-column-center-mode t)
+									org-ellipsis " ▾"
+									visual-fill-column-width 100
+									visual-fill-column-center-mode t
+									org-hide-emphasis-markers t)
 
 						(org-indent-mode)
 						(org-bullets-mode 1)
