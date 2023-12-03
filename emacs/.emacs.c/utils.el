@@ -3,3 +3,6 @@
 					(lambda ()
 						(when (not (eq major-mode 'org-mode))
 							(tabify (point-min) (point-max)))))
+
+;; use tabbar-mode
+(tab-bar-mode)
