@@ -79,7 +79,6 @@
 ;; load configuration for packages
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
-(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc configurations
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)

@@ -14,3 +14,6 @@
 						(electric-pair-mode)
 						(rainbow-delimiters-mode)
 						(rainbow-mode)))
+
+;; enable tab-bar
+(tab-bar-mode t)
