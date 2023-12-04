@@ -48,4 +48,4 @@
 (telephone-line-mode 1)
 
 ;; load theme
-(load-theme 'dracula-theme t)
+(load-theme 'dracula t)

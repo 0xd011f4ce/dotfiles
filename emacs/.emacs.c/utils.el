@@ -14,6 +14,3 @@
 						(electric-pair-mode)
 						(rainbow-delimiters-mode)
 						(rainbow-mode)))
-
-;; use tabbar-mode
-(tab-bar-mode)

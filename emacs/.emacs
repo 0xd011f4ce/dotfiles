@@ -7,17 +7,13 @@
 (setq package-selected-packages
 			'(lsp-mode
 				lsp-ui
-				yasnippet
-				yasnippet-snippets
 				lsp-treemacs
 				projectile
 				hydra
 				flycheck
 				company
-				avy
 				which-key
 				helm-xref
-				dap-mode
 				json-mode
 				emmet-mode
 				prettier
@@ -56,9 +52,6 @@
 ;; which-key
 (which-key-mode)
 
-;; yasnippet
-(global-set-key (kbd "C-c C-y") 'yas-expand)
-
 ;; prettier
 (add-hook 'after-init-hook #'global-prettier-mode)
 
@@ -86,10 +79,10 @@
 ;; load configuration for packages
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
-(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc
-(my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard
+(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc configurations
+(my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
+(my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
 (my/load-if-exists "~/.emacs.c/better-defaults.el") ;; better-defaults
 (my/load-if-exists "~/.emacs.c/utils.el") ;; some useful things
-(my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance

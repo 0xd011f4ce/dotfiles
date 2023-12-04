@@ -17,9 +17,7 @@
 (setq dashboard-center-content t)
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
-(setq dashboard-items '((recents . 10)
-												(bookmarks . 10)
-												(projects . 5)
+(setq dashboard-items '((projects . 5)
 												(agenda . 5)))
 (setq dashboard-set-footer nil)
 
