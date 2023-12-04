@@ -1,6 +1,5 @@
 ;; lsp configurations are here
-(setq gc-cons-threshold (* 100 1024 1024)
-			read-process-output-max (* 1024 1024)
+(setq read-process-output-max (* 1024 1024)
 			company-idle-delay 0.0
 			company-minimum-prefix-length 1)
 

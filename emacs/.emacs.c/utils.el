@@ -17,3 +17,6 @@
 
 ;; enable tab-bar
 (tab-bar-mode t)
+
+;; enable auto fill
+(auto-fill-mode)

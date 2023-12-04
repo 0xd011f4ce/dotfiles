@@ -70,6 +70,8 @@
 (add-hook 'sgml-mode-hook 'emmet-mode)
 
 ;; ===== Custom ====
+(setq gc-cons-threshold (* 100 1024 1024))
+
 (defun my/load-if-exists (file)
 		 (interactive)
 		 (if (file-exists-p file)
