@@ -14,8 +14,7 @@
 									org-ellipsis " ▾"
 									org-hide-emphasis-markers t
 									org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"))
-						(setq-local line-spacing 0.2) ; Add spacing between lines if needed
-						))
+						(setq-local line-spacing 0.2)))
 
 ;; replace list hyphen with dot
 (font-lock-add-keywords 'org-mode
@@ -34,6 +33,7 @@
 
 (require 'org-indent)
 
+(set-face-attribute 'org-table nil	:inherit 'fixed-pitch)
 (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
 (set-face-attribute 'org-code nil		:inherit '(shadow fixed-pitch))
 (set-face-attribute 'org-indent nil :inherit '(org-hide fixed-pitch))
