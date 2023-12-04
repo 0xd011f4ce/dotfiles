@@ -3,6 +3,7 @@
 												 ("org" . "https://orgmode.org/elpa/")
 												 ("elpa" . "https://elpa.gnu.org/packages/")))
 
+;; TODO: I really should organise this
 (setq package-selected-packages
 			'(lsp-mode
 				lsp-ui
@@ -22,7 +23,9 @@
 				prettier
 				magit
 				multiple-cursors
+
 				emms
+				try
 
 				org-bullets
 
