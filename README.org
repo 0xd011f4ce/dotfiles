@@ -4,6 +4,10 @@ Here are the configurations for some programs that I use.
 
 ** Emacs
 
+#+CAPTION: A screenshot of how my emacs look
+#+ATTR_HTML: :width 512px
+[[./images/emacs_ss.png]]
+
 I have a huge emacs config, it has the dracula theme and other packages like,
 lsp, magit, org-mode looks amazing, it uses *tabs instead of *spaces* and a lot of
 other cool features.
