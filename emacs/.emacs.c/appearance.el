@@ -22,7 +22,6 @@
 ;; 80 cols delimiter
 (setq-default fill-column 80)
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
-(add-hook 'text-mode-hook #'display-fill-column-indicator-mode)
 
 ;; all the icons
 (when (display-graphic-p)
@@ -32,19 +31,11 @@
 	(require 'treemacs-all-the-icons)
 	(treemacs-load-theme "all-the-icons"))
 
-;; modeline
-(mood-line-mode)
-
-;; dimmer
-(require 'dimmer)
-(dimmer-configure-which-key)
-(dimmer-configure-helm)
-(setq dimmer-adjustment-mode :foreground
-			dimmer-fraction 0.5)
-(dimmer-mode t)
-
 ;; highlight indent guides
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
+;; change font size
+(set-face-attribute 'default nil :height 100)
 
 ;; gruvbox theme
 (load-theme 'gruvbox-dark-soft t)

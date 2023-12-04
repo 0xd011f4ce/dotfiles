@@ -18,8 +18,3 @@
 ;; other cool stuff
 (require 'erc-ring)
 (erc-ring-mode t)
-
-;; connect to the irc networks when emacs is in server mode
-(defun my/connect-to-irc-servers ()
-	(interactive)
-	(erc-tls :server "irc.suragu.net" :nick "dollface" :port 6697))

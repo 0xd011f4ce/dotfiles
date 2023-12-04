@@ -22,9 +22,9 @@
 				prettier
 				magit
 				multiple-cursors
+				emms
 
 				org-bullets
-				visual-fill-column
 
 				all-the-icons
 				all-the-icons-dired
@@ -32,8 +32,6 @@
 				gruvbox-theme
 				rainbow-delimiters
 				rainbow-mode
-				mood-line
-				dimmer
 				highlight-indent-guides))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
@@ -86,6 +84,7 @@
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc
+(my/load-if-exists "~/.emacs.c/packages/emms.el") ;; emms
 
 ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
