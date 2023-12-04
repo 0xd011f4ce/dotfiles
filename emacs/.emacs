@@ -36,6 +36,7 @@
 				rainbow-delimiters
 				rainbow-mode
 				telephone-line
+				dashboard
 				highlight-indent-guides))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
@@ -89,6 +90,7 @@
 (my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc
 (my/load-if-exists "~/.emacs.c/packages/emms.el") ;; emms
+(my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard
 
 ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance

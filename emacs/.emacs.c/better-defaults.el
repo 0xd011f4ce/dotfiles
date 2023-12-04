@@ -7,22 +7,21 @@
 			inhibit-startup-screen t
 			make-backup-files nil)
 
-;; use only tabs, enable electric pair, rainbow delimiters and rainbow mode
-(add-hook 'prog-mode-hook
-					(lambda ()
-						(setq indent-tabs-mode t
-									tab-width 2
-									c-basic-offset 2
-									python-indent-offset 2)
-						(electric-pair-mode)
-						(rainbow-delimiters-mode)
-						(rainbow-mode)))
+;; ======== NEW KEYBINDINGS				========
+;; tab-bar
+(global-set-key (kbd "s-1") (lambda () (interactive) (tab-bar-select-tab 1)))
+(global-set-key (kbd "s-2") (lambda () (interactive) (tab-bar-select-tab 2)))
+(global-set-key (kbd "s-3") (lambda () (interactive) (tab-bar-select-tab 3)))
+(global-set-key (kbd "s-4") (lambda () (interactive) (tab-bar-select-tab 4)))
+(global-set-key (kbd "s-5") (lambda () (interactive) (tab-bar-select-tab 5)))
+(global-set-key (kbd "s-6") (lambda () (interactive) (tab-bar-select-tab 6)))
+(global-set-key (kbd "s-7") (lambda () (interactive) (tab-bar-select-tab 7)))
+(global-set-key (kbd "s-8") (lambda () (interactive) (tab-bar-select-tab 8)))
+(global-set-key (kbd "s-9") (lambda () (interactive) (tab-bar-select-tab 9)))
 
-;; ======== KEYBINDINGS OVERRIDES ========
-(defun my/set-mark-here ()
-	"sets a mark at the current point"
-	(interactive)
-	(push-mark (point) t nil))
+(global-set-key (kbd "s-w") (lambda () (interactive) (tab-bar-close-tab)))
+(global-set-key (kbd "s-n") (lambda () (interactive) (tab-bar-new-tab)))
 
-;; custom keybindings
-(global-set-key (kbd "C-c C-SPC") 'my/set-mark-here)
+;; window-switching
+(global-set-key (kbd "s-<left>") (lambda () (interactive) (other-window -1)))
+(global-set-key (kbd "s-<right>") (lambda () (interactive) (other-window 1)))

@@ -4,25 +4,6 @@
 			company-idle-delay 0.0
 			company-minimum-prefix-length 1)
 
-(require 'lsp-ui)
-(setq lsp-ui-doc-enable t
-			lsp-ui-doc-use-childframe t
-			lsp-ui-doc-position 'top
-			lsp-ui-doc-include-signature t
-			lsp-ui-sideline-enable t
-			lsp-ui-sideline-show-diagnostics t
-			lsp-ui-sideline-show-hover t
-			lsp-ui-sideline-show-code-actions t
-			lsp-ui-sideline-code-actions-prefix ""
-			lsp-ui-sideline-update-mode 'point)
-
-(global-set-key (kbd "M-RET") 'lsp-ui-sideline-apply-code-actions)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-
-(custom-set-faces
- '(lsp-ui-doc-background ((t (:background "black"))))
- '(lsp-ui-doc-header ((t (:inherit (font-lock-string-face italic))))))
-
 (with-eval-after-load 'lsp-mode
 	(require 'dap-chrome)
 	(require 'company)

@@ -30,39 +30,17 @@ that you don't want (it won't crash if any file inside /.emacs.c/ is missing)
 
 ** Keybinds
 
-*NOTICE*: This might won't be updated, I will be comparing this file with the
-actual emacs config so all the keybindings and changes are here 🤗
+These are the custom keybinds of my emacs config:
 
-I've modified some things and there are some keybinds unique to my config, here
-are some:
-
-| Keybind          | Command                            |
-|------------------+------------------------------------|
-| <f8>             | treemacs                           |
-| C-c C-y (or TAB) | yas-expand                         |
-| C-c m            | mc/mark-all-like-this              |
-| M-RET            | lsp-ui-sideline-apply-code-actions |
-| C-c s            | ispell-word                        |
-| C-c f            | ispell-buffer                      |
-
-And there are also the keybinds from normal packages like /C-x g/ for magit
-and well, you know all those, if not, check the packages in the /.emacs/ file
-and rtfm
-
-** Custom scripts
-
-The /.emacs.c/ folder contains custom scripts that override some default
-behaviours of emacs, here are some of them:
-
-*** better-defaults
-
-This file is called /better-defaults/ because I overwrite some default emacs
-configurations so they work *better* for me, hence the name.
-
-What it does for now is that it overrides the behaviour of /C-v/ and /M-v/ to
-insert a mark before scrolling so I can come back to that position nicely with
-/C-u C-SPC/. Here are all the new keybindings.
-
-| Keybind   | Command          | Description                          |
-|-----------+------------------+--------------------------------------|
-| C-c C-SPC | my/set-mark-here | Creates a mark at the point position |
+| Keybind          | Command                                                                     |
+|------------------+-----------------------------------------------------------------------------|
+| <f8>             | treemacs                                                                    |
+| C-c C-y (or TAB) | yas-expand                                                                  |
+| C-c m            | mc/mark-all-like-this                                                       |
+| C-c s            | ispell-word                                                                 |
+| C-c f            | ispell-buffer                                                               |
+| s-n              | tab-bar-new-tab                                                             |
+| s-w              | tab-bar-close-tab                                                           |
+| s-<n>            | <n> represents a number from 1-9 and it will execute /tab-bar-select-tab <n>/ |
+| s-<left>         | other-window -1 (select window left)                                        |
+| s-<right>        | other-window 1 (select window right)                                        |
