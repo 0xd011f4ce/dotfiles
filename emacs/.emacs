@@ -35,6 +35,7 @@
 				gruvbox-theme
 				rainbow-delimiters
 				rainbow-mode
+				telephone-line
 				highlight-indent-guides))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
