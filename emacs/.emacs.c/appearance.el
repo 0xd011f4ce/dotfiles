@@ -31,9 +31,6 @@
 	(require 'treemacs-all-the-icons)
 	(treemacs-load-theme "all-the-icons"))
 
-;; highlight indent guides
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-
 ;; change font size
 (set-face-attribute 'default nil :height 100)
 
@@ -50,5 +47,5 @@
 
 (telephone-line-mode 1)
 
-;; gruvbox theme
-(load-theme 'gruvbox-dark-soft t)
+;; load theme
+(load-theme 'dracula-theme t)

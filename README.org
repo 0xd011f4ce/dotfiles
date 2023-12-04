@@ -2,14 +2,14 @@
 
 Here are the configurations for some programs that I use.
 
-* Emacs
+** Emacs
 
 I have such a complete emacs config, it has a pretty gruvbox theme (my
 favourite), lsp, magit, org-mode looks amazing, it uses *tabs instead of*
 *spaces* and overwrites some default emacs commands so it works in a way that I
 like it more.
 
-** Installation
+*** Installation
 
 To install it, all you have to do is just to clone the project and symlink both
 files in the /emacs/ folder to your home directory:
@@ -28,7 +28,7 @@ required packages.
 is started in server mode, you can remove those files, and all the other things
 that you don't want (it won't crash if any file inside /.emacs.c/ is missing)
 
-** Keybinds
+*** Keybinds
 
 These are the custom keybinds of my emacs config:
 

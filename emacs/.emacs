@@ -24,7 +24,6 @@
 				magit
 				multiple-cursors
 
-				emms
 				try
 
 				org-bullets
@@ -32,12 +31,11 @@
 				all-the-icons
 				all-the-icons-dired
 				treemacs-all-the-icons
-				gruvbox-theme
 				rainbow-delimiters
 				rainbow-mode
 				telephone-line
 				dashboard
-				highlight-indent-guides))
+				dracula-theme))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
 	(package-refresh-contents)
@@ -89,10 +87,9 @@
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc
-(my/load-if-exists "~/.emacs.c/packages/emms.el") ;; emms
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard
 
-;; the folder is called ".emacs.c" (the c stands for custom im so smort)
-(my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
+;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/better-defaults.el") ;; better-defaults
 (my/load-if-exists "~/.emacs.c/utils.el") ;; some useful things
+(my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
