@@ -37,8 +37,10 @@ These are the custom keybinds of my emacs config:
 | C-c m            | mc/mark-all-like-this                                                       |
 | C-c s            | ispell-word                                                                 |
 | C-c f            | ispell-buffer                                                               |
+| C-c i            | prettier-prettify                                                            |
 | s-n              | tab-bar-new-tab                                                             |
 | s-w              | tab-bar-close-tab                                                           |
 | s-<n>            | <n> represents a number from 1-9 and it will execute /tab-bar-select-tab <n>/ |
 | s-<left>         | other-window -1 (select window left)                                        |
 | s-<right>        | other-window 1 (select window right)                                        |
+| M-y              | helm-show-kill-ring                                                         |
