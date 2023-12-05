@@ -2,24 +2,17 @@
 (require 'org)
 (require 'org-bullets)
 
-;; Use org-bullets
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(setq org-adapt-indentation nil
+			org-ellipsis " ▾"
+			org-hide-emphasis-markers t
+			org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"))
 
 (add-hook 'org-mode-hook
 					(lambda ()
 						(org-indent-mode)
-						(variable-pitch-mode 1)
 						(visual-line-mode 1)
-						(setq org-adapt-indentation nil
-									org-ellipsis " ▾"
-									org-hide-emphasis-markers t
-									org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●"))
+						(org-bullets-mode 1)
 						(setq-local line-spacing 0.2)))
-
-;; replace list hyphen with dot
-(font-lock-add-keywords 'org-mode
-												'(("^ *\\([-]\\) "
-													 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
 (dolist (face '((org-level-1 . 1.2)
 								(org-level-2 . 1.1)
@@ -30,6 +23,11 @@
 								(org-level-7 . 1.1)
 								(org-level-8 . 1.1)))
 	(set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face)))
+
+;; replace list hyphen with dot
+(font-lock-add-keywords 'org-mode
+												'(("^ *\\([-]\\) "
+													 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
 (require 'org-indent)
 

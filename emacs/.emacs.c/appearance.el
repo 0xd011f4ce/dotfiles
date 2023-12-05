@@ -5,6 +5,10 @@
 (tooltip-mode -1)
 (set-fringe-mode 10)
 
+;; make the window translucent
+(set-frame-parameter (selected-frame) 'alpha '(97 . 100))
+(add-to-list 'default-frame-alist '(alpha . (90 . 98)))
+
 ;; show hex colours in text buffers as well
 (add-hook 'text-mode-hook #'rainbow-mode)
 
@@ -32,7 +36,7 @@
 	(treemacs-load-theme "all-the-icons"))
 
 ;; change font size
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil	:height 100)
 
 ;; modeline
 (require 'telephone-line)
