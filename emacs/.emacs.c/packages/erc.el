@@ -1,6 +1,9 @@
 ;; erc configs go here
 (require 'erc)
 
-(erc-track-mode t)
-(setq erc-keywords '("dollface"))
-(erc-notifications-mode)
+(add-hook 'erc-mode
+					(lambda ()
+						(interactive)
+						(erc-track-mode t)
+						(setq erc-keywords '("dollface"))
+						(erc-notifications-mode)))

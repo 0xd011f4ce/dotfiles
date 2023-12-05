@@ -25,3 +25,6 @@
 ;; window-switching
 (global-set-key (kbd "s-<left>") (lambda () (interactive) (other-window -1)))
 (global-set-key (kbd "s-<right>") (lambda () (interactive) (other-window 1)))
+
+;; some little overrides
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)

@@ -53,7 +53,7 @@
 (which-key-mode)
 
 ;; prettier
-(add-hook 'after-init-hook #'global-prettier-mode)
+(global-set-key (kbd "C-c i") 'prettier-prettify)
 
 ;; multiple-cursors
 (require 'multiple-cursors)
