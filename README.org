@@ -33,11 +33,10 @@ These are the custom keybinds of my emacs config:
 | Keybind          | Command                                                                     |
 |------------------+-----------------------------------------------------------------------------|
 | <f8>             | treemacs                                                                    |
-| C-c C-y (or TAB) | yas-expand                                                                  |
-| C-c m            | mc/mark-all-like-this                                                       |
+| C-c m            | mc/mark-all-in-region                                                       |
 | C-c s            | ispell-word                                                                 |
 | C-c f            | ispell-buffer                                                               |
-| C-c i            | prettier-prettify                                                            |
+| C-c i            | prettier-prettify                                                           |
 | s-n              | tab-bar-new-tab                                                             |
 | s-w              | tab-bar-close-tab                                                           |
 | s-<n>            | <n> represents a number from 1-9 and it will execute /tab-bar-select-tab <n>/ |

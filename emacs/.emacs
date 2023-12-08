@@ -5,27 +5,23 @@
 
 ;; TODO: I really should organise this
 (setq package-selected-packages
-			'(lsp-mode
-				lsp-ui
-				lsp-treemacs
+			'(eglot
 				projectile
-				hydra
+				treemacs
+				treemacs-projectile
 				flycheck
 				company
-				which-key
-				helm-xref
-				json-mode
 				emmet-mode
 				prettier
 				magit
 				multiple-cursors
+				helm
 
 				try
 
 				org-bullets
 
 				all-the-icons
-				all-the-icons-dired
 				treemacs-all-the-icons
 				rainbow-delimiters
 				rainbow-mode
@@ -39,9 +35,24 @@
 
 ;;; ==== Packages ====
 
+;; flycheck
+(eval-after-load 'flycheck
+	'(flycheck-add-mode 'proselint 'text-mode))
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;; (add-hook 'after-init-hook 'global-flycheck-mode)
+
+;; company
+(setq company-idle-delay 0.0
+			company-minimum-prefix-length 1
+			company-tooltip-limit 10
+			company-tooltip-align-annotations t
+			company-echo-delay 0
+			company-tooltip-flip-when-above t)
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;; helm
 (helm-mode)
-(require 'helm-xref)
 (define-key global-map [remap find-file] #'helm-find-files)
 (define-key global-map [remap execute-extended-command] #'helm-M-x)
 (define-key global-map [remap switch-to-buffer] #'helm-mini)
@@ -49,8 +60,9 @@
 ;; treemacs
 (global-set-key (kbd "<f8>") 'treemacs)
 
-;; which-key
-(which-key-mode)
+;; projectile
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 ;; prettier
 (global-set-key (kbd "C-c i") 'prettier-prettify)
@@ -73,15 +85,16 @@
 (setq gc-cons-threshold (* 100 1024 1024))
 
 (defun my/load-if-exists (file)
-		 (interactive)
-		 (if (file-exists-p file)
-				 (load file)
-			 (message "File does not exist: %s" file)))
+	(interactive)
+	(if (file-exists-p file)
+			(load file)
+		(message "File does not exist: %s" file)))
 
 ;; load configuration for packages
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
-(my/load-if-exists "~/.emacs.c/packages/lsp.el") ;; lsp-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
+(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc configs
+(my/load-if-exists "~/.emacs.c/packages/eglot.el") ;; eglot configs
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
