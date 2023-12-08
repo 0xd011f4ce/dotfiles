@@ -6,4 +6,4 @@
 						(interactive)
 						(erc-track-mode t)
 						(setq erc-keywords '("dollface"))
-						(erc-notifications-mode)))
+						(erc-notifications-mode t)))
