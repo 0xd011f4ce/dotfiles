@@ -11,6 +11,8 @@
 				treemacs-projectile
 				flycheck
 				company
+				yasnippet
+				yasnippet-snippets
 				emmet-mode
 				prettier
 				magit
@@ -40,7 +42,6 @@
 	'(flycheck-add-mode 'proselint 'text-mode))
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-;; (add-hook 'after-init-hook 'global-flycheck-mode)
 
 ;; company
 (setq company-idle-delay 0.0
@@ -50,6 +51,11 @@
 			company-echo-delay 0
 			company-tooltip-flip-when-above t)
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; yasnippet
+(yas-global-mode 1)
+(global-set-key (kbd "C-c y") 'yas-expand)
+(define-key yas-minor-mode-map (kbd "C-c l") 'yas-describe-tables)
 
 ;; helm
 (helm-mode)
