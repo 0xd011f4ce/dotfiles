@@ -13,6 +13,7 @@
 				company
 				yasnippet
 				yasnippet-snippets
+				which-key
 				emmet-mode
 				prettier
 				magit
@@ -36,6 +37,10 @@
 	(mapc #'package-install package-selected-packages))
 
 ;;; ==== Packages ====
+
+;; which-key
+(setq which-key-show-early-on-C-h t)
+(which-key-mode)
 
 ;; flycheck
 (eval-after-load 'flycheck
