@@ -5,8 +5,7 @@
 
 ;; TODO: I really should organise this
 (setq package-selected-packages
-			'(eglot
-				projectile
+			'(projectile
 				treemacs
 				treemacs-projectile
 				flycheck
@@ -19,8 +18,9 @@
 				magit
 				multiple-cursors
 				helm
-				helpful
 
+				helpful
+				aggressive-indent
 				try
 
 				org-bullets
@@ -113,7 +113,6 @@
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
 (my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc config
-(my/load-if-exists "~/.emacs.c/packages/eglot.el") ;; eglot configs
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance

@@ -12,6 +12,7 @@
 									c-basic-offset 2
 									python-indent-offset 2)
 						(electric-pair-mode)
+						(aggressive-indent-mode)
 						(rainbow-delimiters-mode)
 						(rainbow-mode)))
 
@@ -20,3 +21,7 @@
 
 ;; enable auto fill
 (auto-fill-mode)
+
+;; wind-move
+(when (fboundp 'windmove-default-keybindings)
+	(windmove-default-keybindings))
