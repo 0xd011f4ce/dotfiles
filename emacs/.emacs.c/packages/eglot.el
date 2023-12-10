@@ -4,3 +4,4 @@
 (add-hook 'css-mode-hook 'eglot-ensure)
 (add-hook 'js-mode-hook 'eglot-ensure)
 (add-hook 'python-mode-hook 'eglot-ensure)
+(add-hook 'bash-mode-hook 'eglot-ensure)

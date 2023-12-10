@@ -19,6 +19,7 @@
 				magit
 				multiple-cursors
 				helm
+				helpful
 
 				try
 
@@ -49,7 +50,7 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 ;; company
-(setq company-idle-delay 0.0
+(setq company-idle-delay 0.1
 			company-minimum-prefix-length 1
 			company-tooltip-limit 10
 			company-tooltip-align-annotations t
@@ -87,6 +88,13 @@
 (global-set-key (kbd "C-c s") 'ispell-word)
 (global-set-key (kbd "C-c f") 'ispell-buffer)
 
+;; helpful
+(global-set-key (kbd "C-h f") #'helpful-callable)
+(global-set-key (kbd "C-h v") #'helpful-variable)
+(global-set-key (kbd "C-h k") #'helpful-key)
+(global-set-key (kbd "C-h x") #'helpful-command)
+(global-set-key (kbd "C-c C-d") #'helpful-at-point)
+
 ;;; ==== Languages ====
 
 ;; HTML/CSS
@@ -104,7 +112,7 @@
 ;; load configuration for packages
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
-(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc configs
+(my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc config
 (my/load-if-exists "~/.emacs.c/packages/eglot.el") ;; eglot configs
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)

@@ -6,7 +6,7 @@
 (set-fringe-mode 10)
 
 ;; make the window translucent
-(set-frame-parameter (selected-frame) 'alpha '(97 . 100))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
 (add-to-list 'default-frame-alist '(alpha . (90 . 98)))
 
 ;; show hex colours in text buffers as well

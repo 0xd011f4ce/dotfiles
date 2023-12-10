@@ -30,18 +30,18 @@ required packages.
 
 These are the custom keybinds of my emacs config:
 
-| Keybind   | Command                                                                     |
-|-----------+-----------------------------------------------------------------------------|
-| <f8>      | treemacs                                                                    |
-| C-c m     | mc/mark-all-in-region                                                       |
-| C-c s     | ispell-word                                                                 |
-| C-c f     | ispell-buffer                                                               |
-| C-c i     | prettier-prettify                                                           |
-| C-c C-y   | yas-expand                                                                  |
-| C-c C-l   | yas-describe-tables                                                         |
-| s-n       | tab-bar-new-tab                                                             |
-| s-w       | tab-bar-close-tab                                                           |
-| s-<n>     | <n> represents a number from 1-9 and it will execute /tab-bar-select-tab <n>/ |
-| s-<left>  | other-window -1 (select window left)                                        |
-| s-<right> | other-window 1 (select window right)                                        |
-| M-y       | helm-show-kill-ring                                                         |
+| Keybind | Command               |
+|---------+-----------------------|
+| <f8>    | treemacs              |
+| C-c m   | mc/mark-all-in-region |
+| C-c s   | ispell-word           |
+| C-c f   | ispell-buffer         |
+| C-c i   | prettier-prettify     |
+| C-c C-y | yas-expand            |
+| C-c C-l | yas-describe-tables   |
+| M-y     | helm-show-kill-ring   |
+| C-h v   | helpful-variable      |
+| C-h f   | helpful-callable      |
+| C-h k   | helpful-key           |
+| C-h x   | helpful-command       |
+| C-c C-d | helpful-at-point      |
