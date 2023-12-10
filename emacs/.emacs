@@ -9,7 +9,6 @@
 				treemacs
 				treemacs-projectile
 				flycheck
-				company
 				yasnippet
 				yasnippet-snippets
 				which-key
@@ -22,6 +21,8 @@
 				helpful
 				aggressive-indent
 				try
+
+				markdown-mode ;; i don't use markdown, it's a dependency for lsp-bridge
 
 				org-bullets
 
@@ -48,15 +49,6 @@
 	'(flycheck-add-mode 'proselint 'text-mode))
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-
-;; company
-(setq company-idle-delay 0.1
-			company-minimum-prefix-length 1
-			company-tooltip-limit 10
-			company-tooltip-align-annotations t
-			company-echo-delay 0
-			company-tooltip-flip-when-above t)
-(add-hook 'after-init-hook 'global-company-mode)
 
 ;; yasnippet
 (yas-global-mode 1)
@@ -113,8 +105,22 @@
 (my/load-if-exists "~/.emacs.c/packages/org.el") ;; org-mode configurations
 (my/load-if-exists "~/.emacs.c/packages/dashboard.el") ;; dashboard configs
 (my/load-if-exists "~/.emacs.c/packages/erc.el") ;; erc config
+(my/load-if-exists "~/.emacs.c/packages/lsp-bridge.el") ;; lsp-bridge config
 
 ;; ;; the folder is called ".emacs.c" (the c stands for custom im so smort)
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
 (my/load-if-exists "~/.emacs.c/better-defaults.el") ;; better-defaults
 (my/load-if-exists "~/.emacs.c/utils.el") ;; some useful things
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+	 '(projectile treemacs treemacs-projectile flycheck yasnippet yasnippet-snippets which-key emmet-mode prettier magit multiple-cursors helm helpful aggressive-indent try markdown-mode org-bullets all-the-icons treemacs-all-the-icons rainbow-delimiters rainbow-mode telephone-line dashboard dracula-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

@@ -1,0 +1,3 @@
+[submodule "emacs/.emacs.c/external/lsp-bridge"]
+	path = emacs/.emacs.c/external/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge
