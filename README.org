@@ -50,3 +50,10 @@ These are the custom keybinds of my emacs config:
 | C-c C-l    | org-store-link        |
 | C-c a      | org-agenda            |
 | C-c c      | org-capture           |
+
+** Zsh
+
+My zsh config is nothing special, I just use ohmyzsh, a few plugins and one of
+the default themes, I don't really spend that much time ricing a shell.
+
+[[file:images/zsh_ss.png][A screenshot of my ZSH config]]

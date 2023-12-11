@@ -3,3 +3,4 @@
 
 (require 'lsp-bridge)
 (global-lsp-bridge-mode)
+;; (add-hook 'prog-mode-hook 'lsp-bridge-mode)
