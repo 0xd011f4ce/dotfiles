@@ -30,18 +30,23 @@ required packages.
 
 These are the custom keybinds of my emacs config:
 
-| Keybind | Command               |
-|---------+-----------------------|
-| <f8>    | treemacs              |
-| C-c m   | mc/mark-all-in-region |
-| C-c s   | ispell-word           |
-| C-c f   | ispell-buffer         |
-| C-c i   | prettier-prettify     |
-| C-c C-y | yas-expand            |
-| C-c C-l | yas-describe-tables   |
-| M-y     | helm-show-kill-ring   |
-| C-h v   | helpful-variable      |
-| C-h f   | helpful-callable      |
-| C-h k   | helpful-key           |
-| C-h x   | helpful-command       |
-| C-c C-d | helpful-at-point      |
+| Keybind    | Command               |
+|------------+-----------------------|
+| <f8>       | treemacs              |
+| C-c m      | mc/mark-all-in-region |
+| C-c s      | ispell-word           |
+| C-c f      | ispell-buffer         |
+| C-c i      | prettier-prettify     |
+| C-c C-y    | yas-expand            |
+| C-c C-l    | yas-describe-tables   |
+| M-y        | helm-show-kill-ring   |
+| C-h v      | helpful-variable      |
+| C-h f      | helpful-callable      |
+| C-h k      | helpful-key           |
+| C-h x      | helpful-command       |
+| C-c C-d    | helpful-at-point      |
+| C-c <up>   | org-priority-up       |
+| C-c <down> | org-priority-down     |
+| C-c C-l    | org-store-link        |
+| C-c a      | org-agenda            |
+| C-c c      | org-capture           |

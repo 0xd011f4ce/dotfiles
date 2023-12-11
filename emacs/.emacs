@@ -19,7 +19,6 @@
 				helm
 
 				helpful
-				aggressive-indent
 				try
 
 				markdown-mode ;; i don't use markdown, it's a dependency for lsp-bridge
@@ -111,16 +110,3 @@
 (my/load-if-exists "~/.emacs.c/appearance.el") ;; all configurations regarding appearance
 (my/load-if-exists "~/.emacs.c/better-defaults.el") ;; better-defaults
 (my/load-if-exists "~/.emacs.c/utils.el") ;; some useful things
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-	 '(projectile treemacs treemacs-projectile flycheck yasnippet yasnippet-snippets which-key emmet-mode prettier magit multiple-cursors helm helpful aggressive-indent try markdown-mode org-bullets all-the-icons treemacs-all-the-icons rainbow-delimiters rainbow-mode telephone-line dashboard dracula-theme)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
