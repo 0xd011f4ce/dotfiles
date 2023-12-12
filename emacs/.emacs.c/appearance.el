@@ -31,6 +31,10 @@
 (when (display-graphic-p)
 	(require 'all-the-icons)
 	(require 'treemacs-all-the-icons)
+	
+	(unless (member "all-the-icons" (font-family-list))
+		(all-the-icons-install-fonts))
+
 	(treemacs-load-theme "all-the-icons"))
 
 ;; change font size

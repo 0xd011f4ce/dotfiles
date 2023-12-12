@@ -1,3 +1,6 @@
 [submodule "emacs/.emacs.c/external/lsp-bridge"]
 	path = emacs/.emacs.c/external/lsp-bridge
 	url = https://github.com/manateelazycat/lsp-bridge
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh
