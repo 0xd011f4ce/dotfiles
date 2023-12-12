@@ -5,10 +5,6 @@
 (tooltip-mode -1)
 (set-fringe-mode 10)
 
-;; make the window translucent
-(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
-(add-to-list 'default-frame-alist '(alpha . (90 . 98)))
-
 ;; show hex colours in text buffers as well
 (add-hook 'text-mode-hook #'rainbow-mode)
 
@@ -34,11 +30,19 @@
 	
 	(unless (member "all-the-icons" (font-family-list))
 		(all-the-icons-install-fonts))
+	(treemacs-load-theme "all-the-icons")
 
-	(treemacs-load-theme "all-the-icons"))
+	;; make the window translucent
+	(set-frame-parameter (selected-frame) 'alpha '(95 . 100))
+	(add-to-list 'default-frame-alist '(alpha . (90 . 98)))
 
-;; change font size
-(set-face-attribute 'default nil	:height 100)
+	;; change font size
+	(set-face-attribute 'default nil	:height 100)
+
+	;; setup theme
+	(load-theme 'catppuccin t)
+	(setq catppuccin-flavor 'frappe)
+	(catppuccin-reload))
 
 ;; modeline
 (require 'telephone-line)
@@ -52,6 +56,3 @@
 			telephone-line-evil-use-short-tag t)
 
 (telephone-line-mode 1)
-
-;; load theme
-(load-theme 'dracula t)

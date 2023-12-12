@@ -24,6 +24,7 @@
 				markdown-mode ;; i don't use markdown, it's a dependency for lsp-bridge
 
 				org-bullets
+				org-alert
 
 				all-the-icons
 				treemacs-all-the-icons
@@ -31,7 +32,7 @@
 				rainbow-mode
 				telephone-line
 				dashboard
-				dracula-theme))
+				catppuccin-theme))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
 	(package-refresh-contents)

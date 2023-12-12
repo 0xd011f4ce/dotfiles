@@ -48,7 +48,13 @@
 				("ts" "Clocked Entry Subtask" entry (clock)
 				 "* TODO %?\n	 %U\n	 %a\n	 %i" :empty-lines 1)
 				("td" "Simple TODO" entry (file+olp "~/Org/Tasks.org" "Active")
-				 "* TODO %?\n" :empty-lines 1)
+				 "* TODO %?" :empty-lines 1)
+
+				("c" "Calendar")
+				("ct" "Calendar TODO" entry (file+olp "~/Org/Calendar.org" "Calendar")
+				 "* TODO %?\nDEADLINE: %^T" :empty-lines 1)
+				("cn" "Calendar NEXT" entry (file+olp "~/Org/Calendar.org" "Calendar")
+				 "* NEXT %?\nDEADLINE: %^T\n:PROPERTIES:\n:REMINDERN: 30 25 20 15\n:END:" :empty-lines 1)
 
 				("j" "Journal Entries")
 				("jj" "Journal" entry
@@ -143,3 +149,10 @@
 					(todo "CANC"
 								((org-agenda-overriding-header "Cancelled Projects")
 								 (org-agenda-files org-agenda-files)))))))
+
+(require 'org-alert)
+(setq alert-default-style 'libnotify
+			org-alert-interval 120
+			org-alert-notify-cutoff 10
+			org-alert-notify-after-event-cutoff 5)
+(org-alert-enable)
