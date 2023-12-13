@@ -67,7 +67,11 @@
 				 (file+olp+datetree "~/Org/Journal.org")
 				 "* %<%I:%M %p> - %a :meetings:\n\n%?\n\n"
 				 :clock-in :clock-resume
-				 :empty-lines 1)))
+				 :empty-lines 1)
+
+				("n" "Notes")
+				("nn" "Simple note" entry (file+olp "~/Org/Notes.org" "Notes")
+				 "** %?")))
 
 (add-hook 'org-mode-hook
 					(lambda ()
