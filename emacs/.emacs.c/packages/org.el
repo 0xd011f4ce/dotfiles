@@ -2,6 +2,10 @@
 (require 'org)
 (require 'org-habit)
 (require 'org-bullets)
+(require 'ob)
+(require 'org-alert)
+(require 'org-indent)
+(require 'ox-gfm)
 
 (add-to-list 'org-modules 'org-habit)
 (setq org-habit-graph-column 60)
@@ -95,8 +99,6 @@
 												'(("^ *\\([-]\\) "
 													 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
-(require 'org-indent)
-
 (set-face-attribute 'org-table nil	:inherit 'fixed-pitch)
 (set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
 (set-face-attribute 'org-code nil		:inherit '(shadow fixed-pitch))
@@ -154,9 +156,19 @@
 								((org-agenda-overriding-header "Cancelled Projects")
 								 (org-agenda-files org-agenda-files)))))))
 
-(require 'org-alert)
 (setq alert-default-style 'libnotify
 			org-alert-interval 120
 			org-alert-notify-cutoff 10
 			org-alert-notify-after-event-cutoff 5)
 (org-alert-enable)
+
+;; setup org-babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((C . t)))
+
+(setq org-babel-enable-inline-code t)
+(setq org-babel-results-keyword "results")
+(setq org-export-with-toc nil)
+
+(define-key org-mode-map (kbd "C-c C-c") 'org-babel-execute-src-block)

@@ -1,7 +1,7 @@
 ;; convert spaces to tabs before saving
 (add-hook 'before-save-hook
 					(lambda ()
-						(when (not (eq major-mode 'org-mode))
+						(when (eq major-mode 'prog-mode)
 							(tabify (point-min) (point-max)))))
 
 ;; use only tabs, enable electric pair, rainbow delimiters and rainbow mode
@@ -21,3 +21,20 @@
 
 ;; enable auto fill
 (auto-fill-mode)
+
+;; auto update the LAST_MODIFIED field in org
+(defun my/org-update-last-modified ()
+	(interactive)
+  (save-excursion
+    (goto-char (point-min))
+    (if (re-search-forward "^#\\+LAST_MODIFIED:" nil t)
+        (progn
+          (beginning-of-line)
+          (kill-line)
+          (insert (format-time-string "#+LAST_MODIFIED: %Y-%m-%d %a %H:%M:%S")))
+      (insert (format-time-string "#+LAST_MODIFIED: %Y-%m-%d %a %H:%M:%S")))))
+
+(add-hook 'before-save-hook
+					(lambda ()
+						(when (eq major-mode 'org-mode)
+							(my/org-update-last-modified))))

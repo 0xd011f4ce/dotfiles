@@ -17,11 +17,15 @@
 				magit
 				multiple-cursors
 				helm
+				clang-format
 
 				helpful
 				try
 
 				markdown-mode ;; i don't use markdown, it's a dependency for lsp-bridge
+
+				writefreely
+				ox-gfm
 
 				org-bullets
 				org-alert
@@ -91,6 +95,12 @@
 
 ;; HTML/CSS
 (add-hook 'sgml-mode-hook 'emmet-mode)
+
+;; C
+(add-hook 'before-save-hook
+					(lambda ()
+						(when (eq major-mode 'c-mode)
+							(clang-format-buffer))))
 
 ;; ===== Custom ====
 (setq gc-cons-threshold (* 100 1024 1024))
