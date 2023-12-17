@@ -1,4 +1,4 @@
-#+LAST_MODIFIED: 2023-12-16 Sat 20:47:52
+#+LAST_MODIFIED: 2023-12-16 Sat 23:09:51
 
 * Dotfiles
 
@@ -34,8 +34,6 @@ These are the custom keybinds of my emacs config:
 |------------+-----------------------|
 | <f8>       | treemacs              |
 | C-c m      | mc/mark-all-in-region |
-| C-c s      | ispell-word           |
-| C-c f      | ispell-buffer         |
 | C-c i      | prettier-prettify     |
 | C-c C-y    | yas-expand            |
 | C-c C-l    | yas-describe-tables   |

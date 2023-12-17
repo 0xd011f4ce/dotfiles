@@ -80,10 +80,6 @@
 (global-set-key (kbd "C-c m") 'mc/mark-all-in-region)
 (define-key mc/keymap (kbd "<return>") nil) ;; this causes me issues with emmet
 
-;; ispell
-(global-set-key (kbd "C-c s") 'ispell-word)
-(global-set-key (kbd "C-c f") 'ispell-buffer)
-
 ;; helpful
 (global-set-key (kbd "C-h f") #'helpful-callable)
 (global-set-key (kbd "C-h v") #'helpful-variable)

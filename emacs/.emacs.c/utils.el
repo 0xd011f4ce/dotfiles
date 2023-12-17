@@ -22,6 +22,9 @@
 ;; enable auto fill
 (auto-fill-mode)
 
+;; indent after <RET>
+(global-set-key (kbd "<RET>") 'newline-and-indent)
+
 ;; auto update the LAST_MODIFIED field in org
 (defun my/org-update-last-modified ()
 	(interactive)
