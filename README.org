@@ -1,3 +1,5 @@
+#+LAST_MODIFIED: 2023-12-16 Sat 20:47:52
+
 * Dotfiles
 
 Here are the configurations for some programs that I use.

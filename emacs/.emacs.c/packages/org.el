@@ -171,4 +171,12 @@
 (setq org-babel-results-keyword "results")
 (setq org-export-with-toc nil)
 
+(defun my/org-mode-export-gfm (backend)
+	(when (eq backend 'gfm)
+		(setq-local org-export-with-smart-quotes nil)
+		(setq-local org-export-with-sub-superscripts '{})
+		(setq-local org-export-with-special-strings nil)))
+
+(add-hook 'org-export-before-processing-hook 'my/org-mode-export-gfm)
+
 (define-key org-mode-map (kbd "C-c C-c") 'org-babel-execute-src-block)
